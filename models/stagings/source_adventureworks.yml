@@ -1,0 +1,24 @@
+version: 2
+
+# Raw
+
+sources:
+  - name: sap_adw
+    description: Tabelas que possuem registros de inputs manuais a partir do bando do AdventureWorks.
+    schema: sap_adw
+
+    tables:
+      - name: address
+      - name: salesorderdetail
+      - name: creditcard
+      - name: salesorderheader
+      - name: salesreason
+      - name: salesorderheadersalesreason
+      - name: person
+      - name: businessentitycontact
+      - name: stateprovince
+      - name: countryregion
+      - name: customer
+      - name: businessentityaddress
+      - name: product
+      - name: salesterritory
