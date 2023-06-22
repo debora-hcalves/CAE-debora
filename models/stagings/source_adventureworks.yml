@@ -73,10 +73,6 @@ sources:
             tests:
               - unique
               - not_null
-          - name: addressid
-            tests:
-              - not_null
-              - unique
           - name: personid
             tests:
               - unique
@@ -113,10 +109,10 @@ sources:
           - name: businessentityid
             tests:
               - not_null
-              - unique
           - name: addressid
             tests:
               - not_null
+              - unique
       - name: product
         columns:
           - name: productid
