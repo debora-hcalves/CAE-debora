@@ -33,11 +33,16 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   cae_adventureworks: # <-- Name of the project. If you renamed your project you have to change this as well
-    
-    # Applies to all files under models/example/
-    example:
-      materialized: view
-
+    person:
+      source: &sources
+        +materialized: ephemeral
+      stagings: &stagings
+        +materialized: table
+      intermediate: &intermediate
+        +materialized: ephemeral
+      marts: &marts
+        +materialized: table
+  
 
 seeds:
   cae_adventureworks: # <-- Name of the project. If you renamed your project you have to change this as well
