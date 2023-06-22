@@ -16,4 +16,4 @@ select
     sosr.salesorder_id, sr.name_reason
 from salesordersalesreason as sosr
 left join salesreason as sr on sosr.salesreason_id = sr.salesreason_id
-order by sosr.salesorder_id;
+order by sosr.salesorder_id

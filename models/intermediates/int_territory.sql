@@ -6,7 +6,7 @@ with territory as (
     from {{ ref('stg_salesterritory') }}
 )
 
-, coutryregion as (
+, countryregion as (
     select
         countryregion_code
         , name_country
@@ -23,13 +23,12 @@ with territory as (
 )
 
 select
-    sp.stateprovince_id
-    , sp.name_state
-    , sp.territory_id
+    t.territory_id
     , t.name_territory
-    , sp.countryregion_code
     , cr.name_country
-from stateprovince as sp 
-join territory as t on sp.territory_id = t.territory_id
-join coutryregion as cr on sp.countryregion_code = cr.countryregion_code
-order by sp.stateprovince_id;
+    , sp.stateprovince_id
+    , sp.name_state
+from territory as t 
+join countryregion as cr on t.countryregion_code = cr.countryregion_code
+join stateprovince as sp on t.territory_id = sp.territory_id
+order by t.territory_id
