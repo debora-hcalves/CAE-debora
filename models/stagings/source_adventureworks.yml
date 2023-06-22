@@ -73,6 +73,10 @@ sources:
             tests:
               - unique
               - not_null
+          - name: addressid
+            tests:
+              - not_null
+              - unique
           - name: personid
             tests:
               - unique
