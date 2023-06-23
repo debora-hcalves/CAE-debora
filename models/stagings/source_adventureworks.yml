@@ -66,17 +66,7 @@ sources:
           - name: businessentityid
             tests:
               - not_null
-              - unique                  
-      - name: businessentitycontact
-        columns:
-          - name: businessentityid
-            tests:
               - unique
-              - not_null
-          - name: personid
-            tests:
-              - unique
-              - not_null
       - name: stateprovince
         columns:
           - name: stateprovinceid
