@@ -1,0 +1,17 @@
+version: 2
+
+models:
+
+  - name: dim_address
+    description: Tabela com as cidades, estados, países e territórios.
+    columns:
+      - name: address_id
+        description: Chave primária com os id's 
+      - name: city
+        description: Nome da cidade
+      - name: name_state
+        description: Nome do estado
+      - name: name_country
+        description: Nome do país
+      - name: name_territory
+        description: Nome do território

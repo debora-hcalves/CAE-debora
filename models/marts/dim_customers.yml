@@ -1,0 +1,17 @@
+version: 2
+
+models:
+
+  - name: dim_customers
+    description: Tabela com os dados dos clientes.
+    columns:
+      - name: customer_id
+        description: Chave primária com os id's 
+      - name: first_name
+        description: Primeiro nome do cliente.
+      - name: middle_name
+        description: Nome do meio do cliente.
+      - name: last_name
+        description: Último nome do cliente.
+      - name: address_id
+        description: Chave estrangeira com o id dos address.
