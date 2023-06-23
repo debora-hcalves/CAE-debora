@@ -10,7 +10,6 @@ with order_detail as (
 
 select
     od.orderdetail_id
-    , od.salesorder_id
     , od.product_id
     , p.name_product
     , od.order_qty
