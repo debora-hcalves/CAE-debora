@@ -3,16 +3,29 @@ with customer as (
     from {{ ref('stg_customer') }}
 )
 
-, personal_data as (
-    select *
-    from {{ ref('stg_salesterritory') }}
+, person as (
+    select
+        person_id
+        , first_name
+        , middle_name
+        , last_name
+    from {{ ref('stg_person') }}
 )
 
-select 
+, personaddress as (
+    select
+        businessentity_id
+        , address_id
+    from {{ ref('stg_businessentityaddress') }}
+)
+
+select
     c.customer_id
-    , c.person_id
-    , c.territory_id
-    , pd.name_territory
+    , p.first_name
+    , p.middle_name
+    , p.last_name
+    , pa.address_id    
 from customer as c
-left join personal_data as pd on c.territory_id = pd.territory_id
+left join person as p on c.person_id = p.person_id
+left join personaddress as pa on p.person_id = pa.businessentity_id
 order by c.customer_id

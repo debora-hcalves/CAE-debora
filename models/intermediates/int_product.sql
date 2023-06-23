@@ -9,8 +9,13 @@ with order_detail as (
 )
 
 select
-    od.*
-    ,  p.name_product
+    od.orderdetail_id
+    , od.salesorder_id
+    , od.product_id
+    , p.name_product
+    , od.order_qty
+    , od.unit_price
+    , od.unit_discount
 from order_detail as od
 left join product as p on od.product_id = p.product_id
 order by orderdetail_id
