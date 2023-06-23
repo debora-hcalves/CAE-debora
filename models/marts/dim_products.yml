@@ -1,0 +1,19 @@
+version: 2
+
+models:
+
+  - name: dim_products
+    description: Tabela com os dados dos produtos.
+    columns:
+      - name: orderdetail_id
+        description: Chave primária com os id's dos pedidos.
+      - name: product_id
+        description: Chave estrangeira com o id do produto.
+      - name: name_product
+        description: Nome do produto
+      - name: order_qty
+        description: Quantidade de produto por pedido.
+      - name: unit_price
+        description: Preço da unidade do produto
+      - name: unit_discount
+        description: Disconto da unidade do produto.  
