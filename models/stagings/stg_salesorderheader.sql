@@ -10,7 +10,7 @@ with raw_salesheader as (
     from {{source('sap_adw','salesorderheader')}}
 )
 
-, cte_date as (
+, orderdate as (
     select
         salesorder_id
         , extract(date from sales_date) as order_date
@@ -22,4 +22,4 @@ with raw_salesheader as (
     from raw_salesheader
 )
 
-select * from cte_date
+select * from orderdate
