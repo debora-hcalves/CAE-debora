@@ -22,4 +22,6 @@ with raw_salesheader as (
     from raw_salesheader
 )
 
-select * from orderdate
+select *
+from orderdate
+order by salesorder_id

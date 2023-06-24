@@ -6,3 +6,4 @@ with address as (
 select 
     *
 from address
+order by address_id

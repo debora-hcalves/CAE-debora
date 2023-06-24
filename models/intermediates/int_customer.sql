@@ -20,8 +20,8 @@ with
 
 select
     c.customer_id
-    , p.full_name
-    , pa.address_id    
+    , coalesce(p.full_name, 'unregistered customer') as name_customer
+    , coalesce(pa.address_id, 0) as address_id
 from customer as c
 left join person as p on c.person_id = p.person_id
 left join personaddress as pa on p.person_id = pa.businessentity_id
