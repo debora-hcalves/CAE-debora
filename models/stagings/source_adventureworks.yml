@@ -4,7 +4,7 @@ version: 2
 
 sources:
   - name: sap_adw
-    description: Tabelas que possuem registros de inputs manuais a partir do bando do AdventureWorks.
+    description: Tabelas que possuem registros de inputs manuais a partir do banco do AdventureWorks.
     schema: sap_adw
 
     tables:
@@ -17,6 +17,9 @@ sources:
           - name: stateprovinceid
             tests:
               - not_null
+              - relationships:
+                  field: stateprovinceid
+                  to: ref('stateprovince')
       - name: salesorderdetail
         columns:
           - name: salesorderid
@@ -44,29 +47,55 @@ sources:
           - name: customerid
             tests:
               - not_null
+              - relationships:
+                  field: customerid
+                  to: ref('customer')
           - name: territoryid
             tests:
-              - not_null   
+              - not_null
+          - name: shiptoaddressid
+            tests:
+            - not_null
+            - relationships:
+                field: addressid
+                to: ref('address')
+          - name: creditcardid
+            tests:
+              - relationships:
+                  field: creditcardid
+                  to: ref('creditcard')                       
       - name: salesreason
         columns:
           - name: salesreasonid
             tests:
               - unique
-              - not_null              
+              - not_null
       - name: salesorderheadersalesreason
         columns:
           - name: salesorderid
             tests:
               - not_null
+              - relationships:
+                  field: salesorderid
+                  to: ref('salesorderheader')
           - name: salesreasonid
             tests:
               - not_null
+              - relationships:
+                  field: salesreasonid
+                  to: ref('salesreason')
       - name: person
         columns:
           - name: businessentityid
             tests:
               - not_null
               - unique
+          - name: firstname
+            tests:
+              - not_null
+          - name: lastname
+            tests:
+            - not_null              
       - name: stateprovince
         columns:
           - name: stateprovinceid
@@ -76,9 +105,15 @@ sources:
           - name: territoryid
             tests:
               - not_null
+              - relationships:
+                  field: territoryid
+                  to: ref('salesterritory')
           - name: countryregioncode
             tests:
               - not_null
+              - relationships:
+                  field: countryregioncode
+                  to: ref('countryregion')
       - name: countryregion
         columns:
           - name: countryregioncode
@@ -91,9 +126,11 @@ sources:
             tests:
               - not_null
               - unique
-          - name: territoryid
+          - name: personid
             tests:
-              - not_null
+              - relationships:
+                  field: businessentityid
+                  to: ref('person')
       - name: businessentityaddress
         columns:
           - name: businessentityid
@@ -103,6 +140,9 @@ sources:
             tests:
               - not_null
               - unique
+              - relationships:
+                  field: addressid
+                  to: ref('address')
       - name: product
         columns:
           - name: productid

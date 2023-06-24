@@ -1,6 +1,4 @@
 select
     businessentityid as person_id
-    , firstname as first_name
-    , middlename as middle_name
-    , lastname as last_name
+    , firstname || ' ' || lastname as full_name
 from {{source('sap_adw','person')}}
