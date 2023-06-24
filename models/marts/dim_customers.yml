@@ -7,11 +7,7 @@ models:
     columns:
       - name: customer_id
         description: Chave primária com os id's 
-      - name: first_name
-        description: Primeiro nome do cliente.
-      - name: middle_name
-        description: Nome do meio do cliente.
-      - name: last_name
-        description: Último nome do cliente.
+      - name: name_customer
+        description: Nome do cliente cadastrado.
       - name: address_id
-        description: Chave estrangeira com o id dos address.
+        description: Chave estrangeira com o id do endereço do cliente.
