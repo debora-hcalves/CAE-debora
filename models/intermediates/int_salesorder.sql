@@ -10,7 +10,7 @@ with salesorder as (
 
 
 select
-    count(so.salesorder_id) as qnt
+    so.salesorder_id
     , so.order_date
     , so.totaldue
     , so.status
