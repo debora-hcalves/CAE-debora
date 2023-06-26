@@ -1,12 +1,16 @@
 with raw_salesheader as (
     select
-        salesorderid as salesorder_id,
-        cast(orderdate as timestamp) as sales_date,
-        status,
-        creditcardid as creditcard_id,
-        customerid as customer_id,
-        territoryid as territory_id,
-        shiptoaddressid as address_id
+        salesorderid as salesorder_id
+        , cast(orderdate as timestamp) as sales_date
+        , status
+        , creditcardid as creditcard_id
+        , customerid as customer_id
+        , territoryid as territory_id
+        , shiptoaddressid as address_id
+        , subtotal
+        , taxamt as taxes
+        , freight
+        , totaldue
     from {{source('sap_adw','salesorderheader')}}
 )
 
@@ -19,6 +23,10 @@ with raw_salesheader as (
         , customer_id
         , territory_id
         , address_id
+        , subtotal
+        , taxes
+        , freight
+        , totaldue
     from raw_salesheader
 )
 
