@@ -1,0 +1,19 @@
+version: 2
+
+models:
+
+  - name: dim_dates
+    description: Tabela com o calendário desde 01/01/1970 até a data atual + 10 anos.
+    columns:
+      - name: full_date
+        description: Data completa.
+      - name: year
+        description: Ano
+      - name: year_week
+        description: Semana do ano.
+      - name: day
+        description: dia do ano
+      - name: month
+        description: Mês do ano
+      - name: month_name
+        description: Nome do mês.

@@ -2,21 +2,19 @@ version: 2
 
 models:
 
-  - name: fcr_sales
+  - name: fct_sales
     description: Tabela com os dados das vendas.
     columns:
       - name: salesorder_id
         description: Chave primária com os id's das vendas.
-      - name: orderdetail_id
-        description: Chave estrangeira com o id do pedido.
       - name: order_date
         description: Data da venda.
+      - name: totaldue
+        description: Valor total bruto do pedido.
       - name: status
         description: Status da venda.
       - name: customer_id
         description: Chave estrangeira com o id do cliente.
-      - name: name_reason
-        description: Nome do motivo da venda.  
       - name: card_type
         description: Tipo de cartão de crédito.
       - name: address_id

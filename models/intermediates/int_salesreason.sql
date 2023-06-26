@@ -10,7 +10,9 @@ with
 
 select 
     so.salesorder_id
+    , so.salesreason_id
     , sr.name_reason
+    , sr.reason_type
 from salesorder as so
 left join salesreason as sr on so.salesreason_id = sr.salesreason_id
 order by salesorder_id
