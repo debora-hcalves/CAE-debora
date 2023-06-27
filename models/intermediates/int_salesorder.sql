@@ -12,6 +12,9 @@ with salesorder as (
 select
     so.salesorder_id
     , so.order_date
+    , so.subtotal
+    , so.taxes
+    , so.freight
     , so.totaldue
     , so.status
     , coalesce(cc.card_type, 'not a creditcard purchase') as card_type
