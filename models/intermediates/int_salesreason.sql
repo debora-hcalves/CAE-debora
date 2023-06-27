@@ -3,10 +3,11 @@ with
         select *
         from {{ ref('stg_salesorderheadersalesreason') }}
     )
-, salesreason as (
+    , salesreason as (
     select *
     from {{ ref('stg_salesreason') }}
-)
+    )
+
 
 select 
     so.salesorder_id
