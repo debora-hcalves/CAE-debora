@@ -7,15 +7,30 @@ models:
     columns:
       - name: salesorder_id
         description: Chave primária com os id's das vendas.
+        tests:
+          - not_null
+          - unique
       - name: order_date
         description: Data da venda.
+        tests:
+          - not_null
       - name: totaldue
         description: Valor total bruto do pedido.
+        tests:
+          - not_null
       - name: status
         description: Status da venda.
+        tests:
+          - not_null
       - name: customer_id
         description: Chave estrangeira com o id do cliente.
+        tests:
+          - not_null
       - name: card_type
         description: Tipo de cartão de crédito.
+        tests:
+          - not_null
       - name: address_id
         description: Chave estrangeira com o id dos endereços.
+        tests:
+          - not_null

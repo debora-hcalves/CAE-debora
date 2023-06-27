@@ -7,13 +7,22 @@ models:
     columns:
       - name: full_date
         description: Data completa.
+        tests:
+          - unique
+          - not_null
       - name: year
         description: Ano
-      - name: year_week
-        description: Semana do ano.
+        tests:
+          - not_null
       - name: day
         description: dia do ano
+        tests:
+          - not_null
       - name: month
         description: Mês do ano
+        tests:
+          - not_null
       - name: month_name
         description: Nome do mês.
+        tests:
+          - not_null
