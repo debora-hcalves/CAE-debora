@@ -6,8 +6,11 @@ models:
     description: Tabela com os dados dos clientes.
     columns:
       - name: customer_id
-        description: Chave primária com os id's 
+        description: Chave primária com os id's
+        tests:
+          - not_null
+          - unique 
       - name: name_customer
         description: Nome do cliente cadastrado.
-      - name: address_id
-        description: Chave estrangeira com o id do endereço do cliente.
+        tests:
+          - not_null

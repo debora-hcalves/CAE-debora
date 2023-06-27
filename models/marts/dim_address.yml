@@ -6,12 +6,23 @@ models:
     description: Tabela com as cidades, estados, países e territórios.
     columns:
       - name: address_id
-        description: Chave primária com os id's 
+        description: Chave primária com os id's dos endereços.
+        tests:
+          - not_null
+          - unique
       - name: city
         description: Nome da cidade
+        tests:
+          - not_null
       - name: name_state
         description: Nome do estado
+        tests:
+          - not_null
       - name: name_country
         description: Nome do país
+        tests:
+          - not_null
       - name: name_territory
         description: Nome do território
+        tests:
+          - not_null

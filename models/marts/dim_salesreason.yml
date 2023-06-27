@@ -7,7 +7,13 @@ models:
     columns:
       - name: salesreason_id
         description: Chave primária com os id's dos motivos de compras.
+        tests:
+          - not_null
       - name: name_reason
         description: Nome de cada motivo de venda.
+        tests:
+          - not_null
       - name: reason_type
         description: Nome do tipo do motivo de venda.
+        tests:
+          - not_null

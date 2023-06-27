@@ -22,7 +22,6 @@ with date_spine as (
     select
         full_date
         , extract(year from full_date) as year
-        , extract(week from full_date) as year_week
         , extract(day from full_date) as day
         , extract(month from full_date) as month
     from date_only
@@ -32,7 +31,6 @@ with date_spine as (
     select 
         full_date
         , year
-        , year_week
         , day
         , month 
         ,  CASE
@@ -55,4 +53,3 @@ with date_spine as (
 select *
 from full_calendar
 order by full_date desc
-
