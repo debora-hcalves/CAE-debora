@@ -12,3 +12,4 @@ with
 
 select *
 from salesorderdetail
+order by orderdetail_id

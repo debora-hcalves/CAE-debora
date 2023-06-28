@@ -14,6 +14,26 @@ models:
         description: Data da venda.
         tests:
           - not_null
+      - name: order_year
+        description: Ano da venda.
+        tests:
+          - not_null
+      - name: qnt_products
+        description: Quantidade de produtos (product_id's) por pedido.
+        tests:
+          - not_null
+      - name: qnt_itens
+        description: Quantidade de itens vendidos por pedido.
+        tests:
+          - not_null
+      - name: gross_subtotal_by_order
+        description: Venda bruta por pedido (unit_price*order_qty).
+        tests:
+          - not_null
+      - name: subtotal
+        description: Total da venda com descontos.
+        tests:
+          - not_null
       - name: totaldue
         description: Valor total bruto do pedido.
         tests:
