@@ -1,11 +1,12 @@
 with
     gross_sales_2011 as (
         select
-            sum(totaldue) as gross_sales
+            round(sum(gross_subtotal_by_order)) as grosssales_2011
         from {{ ref('fct_sales') }}
-        where order_date between '2011-01-01' and '2011-12-31'
+        where order_year = 2011
     )
 
-select *
+select 
+    *
 from gross_sales_2011
---where gross_sales_2011 = 151798212.91
+where grosssales_2011 != 12646112
