@@ -11,7 +11,6 @@ with
 
 select 
     so.salesorder_id
-    , so.salesreason_id
     , sr.name_reason
     , sr.reason_type
 from salesorder as so

@@ -40,6 +40,11 @@ with
         group by salesorder_id
     )
 
+    , salesreason as (
+        select *
+        from {{ ref('int_salesreason') }}
+    )
+
     , sales as (
         select
             o.salesorder_id
@@ -49,14 +54,16 @@ with
             , so.qnt_itens
             , so.gross_subtotal_by_order
             , o.status
-            , coalesce(cc.card_type, 'not a creditcard purchase') as card_type
+            , coalesce(cc.card_type, 'Not a Creditcard Purchase') as card_type
             , o.customer_id
             , o.address_id
             , o.subtotal
             , o.totaldue
+            , coalesce(sr.reason_type, 'No Sales Reason Associated') as reason_type
         from orders as o
         left join sales_orders as so on o.salesorder_id = so.salesorder_id
         left join creditcard as cc on o.creditcard_id = cc.creditcard_id
+        left join salesreason as sr on o.salesorder_id = sr.salesorder_id
         order by o.salesorder_id
     )
 

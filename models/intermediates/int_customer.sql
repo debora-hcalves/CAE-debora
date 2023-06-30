@@ -13,7 +13,7 @@ with
 
 select
    c.customer_id
-    , coalesce(p.full_name, 'unregistered customer') as name_customer
+    , coalesce(p.full_name, 'Unregistered Customer') as name_customer
 from customer as c
 left join person as p on c.person_id = p.person_id
 order by c.customer_id
