@@ -48,7 +48,7 @@ with
             , so.qnt_products
             , so.qnt_itens
             , so.gross_subtotal_by_order
-            , o.status
+            , coalesce(o.order_status, 'No Status') as order_status
             , coalesce(cc.card_type, 'not a creditcard purchase') as card_type
             , o.customer_id
             , o.address_id
@@ -63,3 +63,4 @@ with
 select *
 from sales
 order by salesorder_id
+

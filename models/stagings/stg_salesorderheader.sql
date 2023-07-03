@@ -36,7 +36,14 @@ with
             salesorder_id
             , extract(year from order_date) as order_year
             , order_date
-            , status
+            , case
+                when status = 1 then 'In process'
+                when status = 2 then 'Approved'
+                when status = 3 then 'Backordered'
+                when status = 4 then 'Rejected'
+                when status = 5 then 'Shipped'
+                when status = 6 then 'Canceled'
+            end as order_status
             , creditcard_id
             , customer_id
             , territory_id

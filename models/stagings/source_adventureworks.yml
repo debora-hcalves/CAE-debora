@@ -84,7 +84,7 @@ sources:
             tests:
               - relationships:
                   field: creditcardid
-                  to: ref('creditcard')                       
+                  to: ref('creditcard')                   
       - name: salesreason
         columns:
           - name: salesreasonid
