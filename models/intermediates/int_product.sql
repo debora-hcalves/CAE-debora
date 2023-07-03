@@ -16,6 +16,9 @@ select
     , od.order_qty
     , od.unit_price
     , od.unit_discount
+    , od.order_qty*(od.unit_price - od.unit_discount) as total_per_item
 from order_detail as od
 left join product as p on od.product_id = p.product_id
 order by orderdetail_id
+
+
