@@ -38,6 +38,6 @@ select
     , t.name_territory
 from stateprovince as sp
 inner join address as a on sp.stateprovince_id = a.stateprovince_id
-left join countryregion as cr on sp.countryregion_code = cr.countryregion_code
-left join territory as t on sp.territory_id = t.territory_id
+inner join countryregion as cr on sp.countryregion_code = cr.countryregion_code
+inner join territory as t on sp.territory_id = t.territory_id
 order by a.address_id

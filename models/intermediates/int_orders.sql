@@ -49,7 +49,7 @@ with
             , so.qnt_itens
             , so.gross_subtotal_by_order
             , coalesce(o.order_status, 'No Status') as order_status
-            , coalesce(cc.card_type, 'not a creditcard purchase') as card_type
+            , coalesce(cc.card_type, 'Not a Creditcard Purchase') as card_type
             , o.customer_id
             , o.address_id
             , o.subtotal
