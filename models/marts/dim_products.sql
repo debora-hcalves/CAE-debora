@@ -4,5 +4,6 @@ with products as (
 )
 
 select
-    *
+   *
 from products
+

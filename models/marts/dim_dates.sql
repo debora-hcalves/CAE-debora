@@ -50,6 +50,17 @@ with date_spine as (
     from calendar
 )
 
+, moth_year_calendar as (
+    select 
+        full_date
+        , year
+        , day
+        , month
+        , month_name
+        , month_name || '/' || year as month_year
+    from full_calendar
+)
+
 select *
-from full_calendar
+from moth_year_calendar
 order by full_date desc
