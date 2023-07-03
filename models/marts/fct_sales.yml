@@ -38,7 +38,7 @@ models:
         description: Valor total bruto do pedido.
         tests:
           - not_null
-      - name: status
+      - name: order_status
         description: Status da venda.
         tests:
           - not_null
