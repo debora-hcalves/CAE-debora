@@ -57,5 +57,5 @@ with
 
 
 
-select *
+select count(salesorder_id) as qtd
 from ordersyear
