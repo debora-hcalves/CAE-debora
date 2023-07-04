@@ -1,7 +1,8 @@
-with address as (
-    select *
-    from {{ ref('int_address') }}
-)
+with 
+    address as (
+        select *
+        from {{ ref('int_address') }}
+    )
 
 select 
     *
