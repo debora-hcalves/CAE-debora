@@ -55,7 +55,5 @@ with
         from orderdate
     )
 
-
-
 select *
 from ordersyear
