@@ -35,6 +35,7 @@ with
         select
             salesorder_id
             , extract(year from order_date) as order_year
+            , extract(month from order_date) as order_month
             , order_date
             , case
                 when status = 1 then 'In process'
