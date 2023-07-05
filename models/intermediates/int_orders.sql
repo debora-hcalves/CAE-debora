@@ -44,6 +44,7 @@ with
         select
             o.salesorder_id
             , o.order_date
+            , o.order_month
             , o.order_year
             , so.qnt_products
             , so.qnt_itens
