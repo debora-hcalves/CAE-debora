@@ -1,15 +1,18 @@
 with
     customer as (
-        select 
+        select
+
+            -- primary key 
             customerid as customer_id,
+
+            -- foreign keys
             personid as person_id,
             territoryid as territory_id
-        from {{source('sap_adw','customer')}}
+
+        from {{ source('sap_adw','customer') }}
     )
 
-select 
-    customer_id
-    , person_id
+select *
 from customer
-order by customer_id
+
 
