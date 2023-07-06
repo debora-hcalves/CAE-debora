@@ -3,10 +3,10 @@ version: 2
 models:
 
   - name: dim_salesreason
-    description: Tabela com os motivos de compras.
+    description: Tabela com os motivos de venda.
     columns:
       - name: salesreason_id
-        description: Chave primária com os id's dos motivos de compras.
+        description: Chave primária com os id's dos motivos de venda.
         tests:
           - not_null
       - name: name_reason

@@ -1,7 +1,11 @@
-with customers as (
-    select *
-    from {{ ref('int_customer') }}
-)
+with 
+    customers as (
+        
+        -- adding all columns from customer intermediate
+        select *
+
+        from {{ ref('int_customer') }}
+    )
 
 select 
     *

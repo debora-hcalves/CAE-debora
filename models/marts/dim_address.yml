@@ -11,18 +11,18 @@ models:
           - not_null
           - unique
       - name: city
-        description: Nome da cidade
+        description: Nome das cidades.
         tests:
           - not_null
       - name: name_state
-        description: Nome do estado
+        description: Nome dos estados.
         tests:
           - not_null
       - name: name_country
-        description: Nome do país
+        description: Nome dos países.
         tests:
           - not_null
       - name: name_territory
-        description: Nome do território
+        description: Nome dos território.
         tests:
           - not_null
