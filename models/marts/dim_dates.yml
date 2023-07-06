@@ -11,18 +11,22 @@ models:
           - unique
           - not_null
       - name: year
-        description: Ano
+        description: Ano.
         tests:
           - not_null
       - name: day
-        description: dia do ano
+        description: Dia do ano.
         tests:
           - not_null
       - name: month
-        description: Mês do ano
+        description: Mês do ano.
         tests:
           - not_null
       - name: month_name
         description: Nome do mês.
+        tests:
+          - not_null
+      - name: month_year
+        description: Nome do mês concatenado com o ano.
         tests:
           - not_null

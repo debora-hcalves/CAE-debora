@@ -1,9 +1,12 @@
 with
     salesreason as (
-            select
-                *
+
+            -- adding all columns from salesreason intermediate
+            select *
+
             from {{ ref('int_salesreason') }}
     )
 
-select *
+select 
+    *
 from salesreason
