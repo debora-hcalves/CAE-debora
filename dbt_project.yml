@@ -31,21 +31,21 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/ directory
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
+
 models:
-  cae_adventureworks: # <-- Name of the project. If you renamed your project you have to change this as well
-    person:
-      source: &sources
-        +materialized: ephemeral
-      stagings: &stagings
+  # Be sure to namespace your model configs to your project name
+  cae_adventureworks:
+      database: cae-debora
+      staging:
         +materialized: table
-      intermediate: &intermediate
+      intermediate:
         +materialized: ephemeral
-      marts: &marts
+      marts:
         +materialized: table
-  
+
 
 seeds:
   cae_adventureworks: # <-- Name of the project. If you renamed your project you have to change this as well
-    sap_adventure_works:
-      +schema: sap_adw
+    database: cae-debora
+    schema: sap_adw
       
