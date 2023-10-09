@@ -2,6 +2,18 @@
 
 Repository to be used in the challenge for obtaining the Analytics Engineer certification by Indicium. Fork this repository and use it during the challenge to ingest the SAP tables from Adventure Works.
 
+## Table of Contents
+
+- [The Certification](#the-certification)
+- [Context](#context)
+- [Data Description](#data-description)
+- [Results](#results)
+- [Getting Started](#getting-started)
+- [Oauth](#oauth)
+- [dbt Setup](#dbt-setup)
+- [Instructions for Data Ingestion (EL)](#instructions-for-data-ingestion-el)
+- [Resources](#resources)
+
 ## The Certification
 
 The aim of this certification is to assess your skills in a practical Analytics Engineering project following the methodology of the Modern Analytics Stack, developed by Indicium but closely resembling the Modern Data Stack used by thousands of modern data teams.
@@ -26,16 +38,15 @@ To access the complete diagram, please use this [link.](https://github.com/dpava
 
 Adventure Works trusts in your technical ability to design and implement its modern analytics infrastructure from start to finish, which should include items 1 through 4 below.
 
-1. - Conceptual data warehouse diagram in PDF format: create the conceptual model with the necessary fact and dimension tables to answer the business questions in item 4. Provide a concise overview of the source tables used to create each dimension and the fact table. 
-2. - Cloud data warehouse configuration and dbt setup. Suggestion: Google Bigquery.
-3. - Data transformation: transform raw data using dbt. This transformation should include the following points:
-
+1. Conceptual data warehouse diagram in PDF format: create the conceptual model with the necessary fact and dimension tables to answer the business questions in item 4. Provide a concise overview of the source tables used to create each dimension and the fact table. 
+2. Cloud data warehouse configuration and dbt setup. Suggestion: Google Bigquery.
+3. Data transformation: transform raw data using dbt. This transformation should include the following points:
     - Documentation of tables and columns in the marts
     - Source tests
     - Tests on the primary keys of dimension and fact tables
     - Data testing (Gross sales for 2011 matched the amount of $12,646,112.16)
     - The code needs to be in a repository (suggestion: github).
-4. - BI Dashboards: create in a tool of your choice, but one that allows you to answer the following business questions:
+4. BI Dashboards: create in a tool of your choice, but one that allows you to answer the following business questions:
     - What is the number of orders, quantity purchased, total negotiated value per product, card type, sale reason, sale date, customer, status, city, state, and country?
     - What are the products with the highest average ticket per month, year, city, state, and country? (Average ticket = Gross revenue - product discounts / number of orders in the analysis period)
     - Who are the top 10 customers by total negotiated value, filtered by product, card type, sale reason, sale date, status, city, state, and country?
