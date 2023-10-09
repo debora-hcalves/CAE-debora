@@ -29,17 +29,17 @@ Adventure Works trusts in your technical ability to design and implement its mod
 1. - Conceptual data warehouse diagram in PDF format: create the conceptual model with the necessary fact and dimension tables to answer the business questions in item 4. Provide a concise overview of the source tables used to create each dimension and the fact table. 
 2. - Cloud data warehouse configuration and dbt setup. Suggestion: Google Bigquery.
 3. - Data transformation: transform raw data using dbt. This transformation should include the following points:
-    a. - Documentation of tables and columns in the marts
-    b. - Source tests
-    c. - Tests on the primary keys of dimension and fact tables
-    d. - Data testing (Gross sales for 2011 matched the amount of $12,646,112.16)
-    e. - The code needs to be in a repository (suggestion: github).
+a. - Documentation of tables and columns in the marts
+b. - Source tests
+c. - Tests on the primary keys of dimension and fact tables
+d. - Data testing (Gross sales for 2011 matched the amount of $12,646,112.16)
+e. - The code needs to be in a repository (suggestion: github).
 4. - BI Dashboards: create in a tool of your choice, but one that allows you to answer the following business questions:
-    a. - What is the number of orders, quantity purchased, total negotiated value per product, card type, sale reason, sale date, customer, status, city, state, and country?
-    b. - What are the products with the highest average ticket per month, year, city, state, and country? (Average ticket = Gross revenue - product discounts / number of orders in the analysis period)
-    c. - Who are the top 10 customers by total negotiated value, filtered by product, card type, sale reason, sale date, status, city, state, and country?d. - What are the top 5 cities by total negotiated value, filtered by product, card type, sale reason, sale date, customer, status, city, state, and country?
-    e. - What is the number of orders, quantity purchased, total negotiated value per month and year?
-    f - Which product has the highest quantity purchased for the sale reason "Promotion"?
+a. - What is the number of orders, quantity purchased, total negotiated value per product, card type, sale reason, sale date, customer, status, city, state, and country?
+b. - What are the products with the highest average ticket per month, year, city, state, and country? (Average ticket = Gross revenue - product discounts / number of orders in the analysis period)
+c. - Who are the top 10 customers by total negotiated value, filtered by product, card type, sale reason, sale date, status, city, state, and country?d. - What are the top 5 cities by total negotiated value, filtered by product, card type, sale reason, sale date, customer, status, city, state, and country
+e. - What is the number of orders, quantity purchased, total negotiated value per month and year?
+f - Which product has the highest quantity purchased for the sale reason "Promotion"?
 
 
 ## Getting Started
@@ -47,9 +47,7 @@ Adventure Works trusts in your technical ability to design and implement its mod
 
 `git clone https://github.com/debora-hcalves/analytics-engineer-certification.git`
 
-2. After cloning, create a [virtual environment](https://virtualenv.pypa.io/en/latest/installation.html) for the installation. The recommended python version for dbt is 3.8 and any of its patches.
-
-For Linux: 
+2. After cloning, create a [virtual environment](https://virtualenv.pypa.io/en/latest/installation.html) for the installation. The recommended python version for dbt is 3.8 and any of its patches. For Linux: 
 
 `python3.8 -m venv venv`
 
