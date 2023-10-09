@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'cae_adventureworks' # <-- Name of the project.
+name: 'analytics-engineer-certification' # <-- Name of the project.
 version: '1.0.0'
 config-version: 2
 
@@ -34,8 +34,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   # Be sure to namespace your model configs to your project name
-  cae_adventureworks:
-      database: cae-debora
+  analytics-engineer-certification:
+      database: dbt_yoursurname
       staging:
         +materialized: table
       intermediate:
@@ -45,7 +45,7 @@ models:
 
 
 seeds:
-  cae_adventureworks: # <-- Name of the project. If you renamed your project you have to change this as well
-    database: cae-debora
+  analytics-engineer-certification: # <-- Name of the project. If you renamed your project you have to change this as well
+    database: dbt_yoursurname
     schema: sap_adw
       
