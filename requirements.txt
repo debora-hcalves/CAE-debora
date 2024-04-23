@@ -8,7 +8,7 @@ charset-normalizer==3.3.0
 click==8.1.7
 colorama==0.4.6
 dbt-bigquery==1.6.6
-dbt-core==1.6.5
+dbt-core==1.6.13
 dbt-extractor==0.4.1
 dbt-semantic-interfaces==0.2.2
 google-api-core==2.12.0
